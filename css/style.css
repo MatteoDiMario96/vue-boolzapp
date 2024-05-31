@@ -7,7 +7,7 @@
 body{
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
 }
 div#container-principale{
     position: relative;
@@ -63,7 +63,7 @@ main > header {
     align-items: center;
     padding: .5rem;
     background-color: #eaeaea;
-    height: 66px;
+    height: 50px;
     border-right: 1px solid #b9bcbc;
 }
 
@@ -72,11 +72,15 @@ aside > header > div#profilo-attivo{
     align-items: center;
 }
 
+div.nome-utente{
+    font-size: 15px;
+}
+
 aside > header > div#profilo-attivo > img,
 section#lista-messaggi > ul > li > div > img,
 main header img {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     margin-right: .5rem;
 }
@@ -111,6 +115,15 @@ aside > section#disattiva-notifiche > div#attiva-disattiva-notifiche > a{
     color: #6c7171;
 }
 
+div#notifiche{
+    font-size: 14px;
+    margin-bottom: .2rem;
+}
+
+div#attiva-disattiva-notifiche > a > p {
+    font-size: 10px;
+}
+
 
 aside > nav#ricerca-messaggi{
     position: relative;
@@ -125,7 +138,7 @@ aside > nav#ricerca-messaggi > i{
 }
 
 aside > nav#ricerca-messaggi > input {
-    width: 100%;
+    width: 95%;
     padding-top: .3rem;
     padding-bottom: .3rem;
     padding-left: 3rem;
@@ -133,6 +146,7 @@ aside > nav#ricerca-messaggi > input {
     border-radius: .5rem;
     border: 2px solid #e9ebeb;
     color:#6c7171;
+    margin: 0 .5rem .5rem .5rem;
     margin-bottom: 1rem;
 }
 
@@ -155,6 +169,10 @@ section#lista-messaggi > ul > li {
     border-bottom: 1px solid #eaeaea;
 }
 
+ul > li > div > img {
+    margin-left: .5rem;
+}
+
 section#lista-messaggi > ul > li:last-child{
     margin-bottom: 0;
 }
@@ -168,26 +186,37 @@ section#lista-messaggi > ul > li > div.data-ora-messaggio{
     margin-right: .3rem;
 }
 
+div.ultimo-messaggio-inviato{
+    font-size: 12px;
+    color: #b9bcbc;
+}
+
+div.data-ora-messaggio{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: 12px;
+    color: #6c7171;
+}
+
 main > header > div#chat-aperta{
     display: flex;
     align-items: center;
 }
 
-main > header{
-    height: 66px;
-
-    background-color: #eaeaea;
+div.ora{
+    align-self: flex-end;
 }
 
 main > section#messaggi{
     background-image: url('../img/mine.jpg');
     object-fit: cover;
     width: 100%;
-    height: calc(100% - 132px);
+    height: calc(100% - 100px);
 }
 
 main > footer{
-    height: 66px;
+    height: 50px;
 
     background-color: #eaeaea;
 }
@@ -229,11 +258,15 @@ footer#scrittura-emoticon-vocale > div#testo-messaggio > input{
     padding: .3rem .4rem;
 }
 
+div.fs_12{
+    font-size: 12px;
+}
 .messaggio-inviato{
     background-color: #d5f9ba;
     padding: .5rem .4rem;
     border-radius: .5rem;
     margin-top: .6rem;
+    font-size: 15px;
 }
 
 .messaggio-ricevuto{
@@ -241,4 +274,5 @@ footer#scrittura-emoticon-vocale > div#testo-messaggio > input{
     padding: .5rem .4rem;
     border-radius: .5rem;
     margin-top: 1rem;
+    font-size: 15px;
 }

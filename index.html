@@ -43,7 +43,7 @@
                             <i class="fa-solid fa-bell-slash fa-xl"></i>
                         </div>
                         <div id="attiva-disattiva-notifiche">
-                            <div>
+                            <div id="notifiche">
                                 Ricevi notifiche di nuovi messaggi 
                             </div>
                             <a href="#">
@@ -59,7 +59,7 @@
                     </nav>
                     <section id="lista-messaggi">
                         <ul>
-                            <li v-for="contact in contacts">
+                            <li v-for="(contact, indice) in contacts" :key="indice">
                                 <div class="messaggio-sinistro">
                                     <img :src="`${contact.avatar}.jpg`" alt="">
                                     <div class="barra-messaggio">
@@ -74,7 +74,12 @@
                                     </div>
                                 </div>
                                 <div class="data-ora-messaggio">
-                                    25/11/2023 11.24
+                                    <div class="data">
+                                        25/11/23 
+                                    </div>
+                                    <div class="ora">
+                                        11.24
+                                    </div>
                                 </div>
                             </li>
                         </ul>
@@ -83,12 +88,12 @@
                 <main>
                     <header>
                         <div id="chat-aperta">
-                            <img :src="profiloAttivoBoolzapp.avatar" alt="">
+                            <img :src="`${contacts[chatAttiva].avatar}.jpg`" alt="">
                             <div>
                                 <div class="nome-utente">
-                                    {{ profiloAttivoBoolzapp.name }}
+                                    {{ contacts[chatAttiva].name }}
                                 </div>
-                                <div>
+                                <div class="fs_12">
                                     Ultimo accesso oggi alle 12.00
                                 </div>
                             </div>
@@ -103,7 +108,7 @@
                     <section id="messaggi">
                         <div class="messaggio_ricevuto">
                             <span class="messaggio-ricevuto">
-                                Ciao Matteo!
+                                
                             </span>
                         </div>
                         <div class="messaggio_inviato">

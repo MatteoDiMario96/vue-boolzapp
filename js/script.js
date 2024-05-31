@@ -169,7 +169,14 @@ createApp({
             profiloAttivoBoolzapp: {
                 name: 'Matteo',
                 avatar: './img/avatar_io.jpg',
-            }
+            },
+            chatAttiva: 0,
+            
         }
+    },
+    methods:{
+        //Creare una funzione che al click mi modifichi il numero di chat attiva.
+
+        //Senti il vocale che ti sei fatto per ricordarti la tua logica che hai dietro. 
     }
 }).mount('#app')
