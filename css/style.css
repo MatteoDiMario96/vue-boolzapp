@@ -38,9 +38,10 @@ aside > header > div#profilo-attivo{
     
 }
 
-aside > header > div#profilo-attivo > img {
-    width: 70px;
-    height: 70px;
+aside > header > div#profilo-attivo > img,
+section#lista-messaggi > ul > li > div > img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: .5rem;
 }
@@ -54,13 +55,14 @@ aside > section#disattiva-notifiche{
     align-items: center;
     background-color: #8edafc;
     padding: .7rem;
+    margin-bottom: .3rem;
     
 }
 
 aside > section#disattiva-notifiche > div#bell > i{
     background-color: white;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     border-radius: 50%;
     color:#8edafc;
     display: flex;
@@ -68,6 +70,11 @@ aside > section#disattiva-notifiche > div#bell > i{
     justify-content: center;
     margin-right: .5rem;
 }
+
+aside > section#disattiva-notifiche > div#attiva-disattiva-notifiche > a{
+    color: #6c7171;
+}
+
 
 aside > nav#ricerca-messaggi{
     position: relative;
@@ -90,5 +97,22 @@ aside > nav#ricerca-messaggi > input {
     border-radius: .5rem;
     border: 2px solid #e9ebeb;
     color:#6c7171;
+    margin-bottom: 1rem;
+}
+
+section#lista-messaggi > ul {
+    list-style-type: none;
+}
+
+section#lista-messaggi > ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+section#lista-messaggi > ul > li > div{
+    display: flex;
+    align-items: center;
 }
 
