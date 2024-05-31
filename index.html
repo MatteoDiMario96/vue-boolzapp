@@ -16,77 +16,84 @@
 </head>
 <body>
     <div id="app">
-
-        <div id="container">
-            <aside>
-                <header>
-                    <div id="profilo-attivo">
-                        <img :src="profiloAttivoBoolzapp.avatar" alt="">
-                        <div class="nome-utente">
-                            {{ profiloAttivoBoolzapp.name }}
+        <div id="container-principale">
+            <section id="verde">
+            
+            </section>
+            <section id="grigia">
+            </section>
+            <div id="container">
+                <aside>
+                    <header>
+                        <div id="profilo-attivo">
+                            <img :src="profiloAttivoBoolzapp.avatar" alt="">
+                            <div class="nome-utente">
+                                {{ profiloAttivoBoolzapp.name }}
+                            </div>
                         </div>
-                    </div>
-    
-                    <div id="icon-header-aside">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </header>
-                <section id="disattiva-notifiche">
-                    <div id="bell">
-                        <i class="fa-solid fa-bell-slash fa-xl"></i>
-                    </div>
-                    <div id="attiva-disattiva-notifiche">
-                        <div>
-                            Ricevi notifiche di nuovi messaggi 
+        
+                        <div id="icon-header-aside">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
                         </div>
-                        <a href="#">
-                            <p>
-                                Attiva notifiche desktop
-                            </p>
-                        </a>
-                    </div>
-                </section>
-                <nav id="ricerca-messaggi">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
-                </nav>
-                <section id="lista-messaggi">
-                    <ul>
-                        <li v-for="contact in contacts">
-                            <div class="messaggio-sinistro">
-                                <img :src="`${contact.avatar}.jpg`" alt="">
-                                <div class="barra-messaggio">
-                                    <div id="nome-ultimo-messaggio">
-                                        <div class="nome-utente">
-                                            {{ contact.name }}
-                                        </div>
-                                        <div class="ultimo-messaggio-inviato">
-                                            Ultimo messaggio inviato
+                    </header>
+                    <section id="disattiva-notifiche">
+                        <div id="bell">
+                            <i class="fa-solid fa-bell-slash fa-xl"></i>
+                        </div>
+                        <div id="attiva-disattiva-notifiche">
+                            <div>
+                                Ricevi notifiche di nuovi messaggi 
+                            </div>
+                            <a href="#">
+                                <p>
+                                    Attiva notifiche desktop
+                                </p>
+                            </a>
+                        </div>
+                    </section>
+                    <nav id="ricerca-messaggi">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    </nav>
+                    <section id="lista-messaggi">
+                        <ul>
+                            <li v-for="contact in contacts">
+                                <div class="messaggio-sinistro">
+                                    <img :src="`${contact.avatar}.jpg`" alt="">
+                                    <div class="barra-messaggio">
+                                        <div id="nome-ultimo-messaggio">
+                                            <div class="nome-utente">
+                                                {{ contact.name }}
+                                            </div>
+                                            <div class="ultimo-messaggio-inviato">
+                                                Ultimo messaggio inviato
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="data-ora-messaggio">
-                                25/11/2023 11.24
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-            </aside>
-            <main>
-                <header>
-    
-                </header>
-                <section id="messaggi">
-    
-                </section>
-                <footer id="scrittura-emoticon-vocale">
-    
-                </footer>
-            </main>
+                                <div class="data-ora-messaggio">
+                                    25/11/2023 11.24
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                </aside>
+                <main>
+                    <header>
+        
+                    </header>
+                    <section id="messaggi">
+        
+                    </section>
+                    <footer id="scrittura-emoticon-vocale">
+        
+                    </footer>
+                </main>
+            </div> 
         </div>
+        
     </div>
     
     <!--Vue3 Script-->
