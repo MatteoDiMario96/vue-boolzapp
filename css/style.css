@@ -67,6 +67,28 @@ aside > section#disattiva-notifiche > div#bell > i{
     align-items: center;
     justify-content: center;
     margin-right: .5rem;
+}
 
+aside > nav#ricerca-messaggi{
+    position: relative;
+}
+
+aside > nav#ricerca-messaggi > i{
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    top:.4rem;
+    color: #b9bcbc;
+}
+
+aside > nav#ricerca-messaggi > input {
+    width: 100%;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    padding-left: 3rem;
+
+    border-radius: .5rem;
+    border: 2px solid #e9ebeb;
+    color:#6c7171;
 }
 
