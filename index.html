@@ -16,31 +16,58 @@
 </head>
 <body>
     <div id="app">
-        <aside>
-            <header>
 
-            </header>
-            <section id="disattiva-notifiche">
-
-            </section>
-            <nav id="ricerca-messaggi">
-
-            </nav>
-            <section id="lista-messaggi">
-
-            </section>
-        </aside>
-        <main>
-            <header>
-
-            </header>
-            <section id="messaggi">
-
-            </section>
-            <footer id="scrittura-emoticon-vocale">
-                
-            </footer>
-        </main>
+        <div id="container">
+            <aside>
+                <header>
+                    <div id="profilo-attivo">
+                        <img :src="profiloAttivoBoolzapp.avatar" alt="">
+                        <div>
+                            {{ profiloAttivoBoolzapp.name }}
+                        </div>
+                    </div>
+    
+                    <div id="icon-header-aside">
+                        <i class="fa-solid fa-circle-notch"></i>
+                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </div>
+                </header>
+                <section id="disattiva-notifiche">
+                    <div id="bell">
+                        <i class="fa-solid fa-bell-slash fa-2xl"></i>
+                    </div>
+                    <div id="attiva-disattiva-notifiche">
+                        <div>
+                            Ricevi notifiche di nuovi messaggi 
+                        </div>
+                        <a href="#">
+                            <p>
+                                Attiva notifiche desktop
+                            </p>
+                        </a>
+                    </div>
+                </section>
+                <nav id="ricerca-messaggi">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text">
+                </nav>
+                <section id="lista-messaggi">
+    
+                </section>
+            </aside>
+            <main>
+                <header>
+    
+                </header>
+                <section id="messaggi">
+    
+                </section>
+                <footer id="scrittura-emoticon-vocale">
+    
+                </footer>
+            </main>
+        </div>
     </div>
     
     <!--Vue3 Script-->

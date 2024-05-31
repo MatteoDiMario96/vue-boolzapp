@@ -9,3 +9,64 @@ body{
     font-weight: 400;
     font-style: italic;
 }
+
+aside,
+main{
+    padding: 2rem;
+}
+
+aside{
+    height: 100%;
+    width: 40%;
+}
+
+main{
+    height: 100%;
+    width: 60%;
+}
+
+aside > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+aside > header > div#profilo-attivo{
+    display: flex;
+    align-items: center;
+    
+}
+
+aside > header > div#profilo-attivo > img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: .5rem;
+}
+
+aside > header > div#icon-header-aside > i{
+    margin-left: .7rem;
+}
+
+aside > section#disattiva-notifiche{
+    display: flex;
+    align-items: center;
+    background-color: #8edafc;
+    padding: .7rem;
+    
+}
+
+aside > section#disattiva-notifiche > div#bell > i{
+    background-color: white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    color:#8edafc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: .5rem;
+
+}
+
