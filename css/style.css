@@ -11,6 +11,8 @@ body{
 }
 div#container-principale{
     position: relative;
+    height: 100vh;
+    width: 100vw;
 }
 
 section#verde{
@@ -41,7 +43,8 @@ div#container{
     display: flex;
     position:absolute;
     z-index: 1;
-    left: 90px;
+    left: 10%;
+    /* right: 90px; */
     top: 15px;
     width: 85%;
     height: 95%;
@@ -124,12 +127,11 @@ aside > nav#ricerca-messaggi > input {
     color:#6c7171;
     margin-bottom: 1rem;
 }
-section#lista-messaggi{
-    overflow-y: scroll;
-}
 
 section#lista-messaggi > ul {
     list-style-type: none;
+    overflow: auto;
+    height: 100%;
 }
 
 section#lista-messaggi > ul > li {
@@ -173,4 +175,33 @@ main > footer{
     height: 66px;
 
     background-color: #eaeaea;
+}
+section#messaggi{
+display: flex;
+flex-direction: column;
+
+}
+
+div.messaggio_ricevuto,
+div.messaggio_inviato{
+    padding: 1rem;
+}
+
+section#messaggi > div.messaggio_inviato{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.messaggio-inviato{
+    background-color: #d5f9ba;
+    padding: .5rem .4rem;
+    border-radius: .5rem;
+    margin-top: .6rem;
+}
+
+.messaggio-ricevuto{
+    background-color: white;
+    padding: .5rem .4rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
 }
