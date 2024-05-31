@@ -82,7 +82,23 @@
                 </aside>
                 <main>
                     <header>
+                        <div id="chat-aperta">
+                            <img :src="profiloAttivoBoolzapp.avatar" alt="">
+                            <div>
+                                <div class="nome-utente">
+                                    {{ profiloAttivoBoolzapp.name }}
+                                </div>
+                                <div>
+                                    Ultimo accesso oggi alle 12.00
+                                </div>
+                            </div>
+                        </div>
         
+                        <div id="icon-header-main">
+                            <i class="fa-solid fa-circle-notch"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
                     </header>
                     <section id="messaggi">
                         <div class="messaggio_ricevuto">
@@ -116,8 +132,16 @@
                             </span>
                         </div>
                     </section>
-                    <footer id="scrittura-emoticon-vocale">
-        
+                    <footer id="scrittura-emoticon-vocale">                    
+                        <div id="emoticon">
+                            <i class="fa-regular fa-face-smile-wink fa-xl"></i>
+                        </div>
+                        <div id="testo-messaggio">
+                            <input type="text" placeholder="Scrivi un messaggio">
+                        </div>
+                        <div id="vocale">
+                            <i class="fa-solid fa-microphone fa-xl"></i>
+                        </div>
                     </footer>
                 </main>
             </div> 
