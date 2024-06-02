@@ -236,6 +236,21 @@ section#messaggi > div.messaggio_inviato{
     display: flex;
     flex-direction: row-reverse;
 }
+.messaggio-inviato{
+    background-color: #d5f9ba;
+    padding: .5rem .4rem;
+    border-radius: .5rem;
+    margin-top: .6rem;
+    font-size: 15px;
+}
+
+.messaggio-ricevuto{
+    background-color: white;
+    padding: .5rem .4rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    font-size: 15px;
+}
 
 footer#scrittura-emoticon-vocale{
     display: flex;
@@ -260,19 +275,4 @@ footer#scrittura-emoticon-vocale > div#testo-messaggio > input{
 
 div.fs_12{
     font-size: 12px;
-}
-.messaggio-inviato{
-    background-color: #d5f9ba;
-    padding: .5rem .4rem;
-    border-radius: .5rem;
-    margin-top: .6rem;
-    font-size: 15px;
-}
-
-.messaggio-ricevuto{
-    background-color: white;
-    padding: .5rem .4rem;
-    border-radius: .5rem;
-    margin-top: 1rem;
-    font-size: 15px;
 }

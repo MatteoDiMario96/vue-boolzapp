@@ -107,17 +107,19 @@
                     </header>
                     <section id="messaggi">
                         <!-- Se ha status received va vedere altrimenti no -->
-                        <div class="messaggio_ricevuto">
-                            <span class="messaggio-ricevuto">
-                                Ciao Matthew!
-                            </span>
-                        </div>
-                        <!-- Se ha status sent va vedere altrimenti no -->
-                        <div class="messaggio_inviato">
+                        <template v-for="(message,indice) in contacts[chatAttiva].messages" :key="indice" class="">
+                            <div v-if="message.status === 'received' " class="messaggio_ricevuto">
+                                <span class="messaggio-ricevuto">
+                                    {{ message.message }}
+                                </span>
+                            </div>
+                            <div v-else class="messaggio_inviato">
                             <span class="messaggio-inviato">
-                                Ciao Saretta, come stai?
+                                {{ message.message }}
                             </span>
                         </div>
+                        </template>
+                        
                     </section>
                     <footer id="scrittura-emoticon-vocale">                    
                         <div id="emoticon">
