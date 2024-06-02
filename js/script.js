@@ -170,7 +170,7 @@ createApp({
                 name: 'Matteo',
                 avatar: './img/avatar_io.jpg',
             },
-            chatAttiva: 3,
+            chatAttiva: 0,
             
         }
     },
