@@ -175,8 +175,10 @@ createApp({
         }
     },
     methods:{
-        //Creare una funzione che al click mi modifichi il numero di chat attiva.
-
+        cambiaChatAttiva: function(chatClickata){
+            this.chatAttiva = chatClickata;
+            console.log("ciao")
+        }
         //Senti il vocale che ti sei fatto per ricordarti la tua logica che hai dietro. 
     }
 }).mount('#app')
