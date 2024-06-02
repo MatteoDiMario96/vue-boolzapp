@@ -59,7 +59,7 @@
                     </nav>
                     <section id="lista-messaggi">
                         <ul>
-                            <li @click="cambiaChatAttiva(indice)" v-for="(contact, indice) in contacts" :key="indice">
+                            <li v-for="(contact, indice) in contacts" :key="indice" @click="cambiaChatAttiva(indice)">
                                 <div class="messaggio-sinistro">
                                     <img :src="`${contact.avatar}.jpg`" alt="">
                                     <div class="barra-messaggio">
