@@ -214,7 +214,14 @@ createApp({
                     name: elemento.name.toLowerCase()
                 }
             })
+            const contactsUpperCase = this.contacts.map((elemento) => {
+                return{
+                    name: elemento.name.toUpperCase()
+                }
+            })
             if(contactsLowerCase[indiceElemento].name.includes(this.filtraChat)){
+                return true
+            }else if(contactsUpperCase[indiceElemento].name.includes(this.filtraChat)){
                 return true
             }
             return false 
