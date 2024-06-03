@@ -188,14 +188,24 @@ createApp({
             if(this.testoNuovoMessaggio.length > 1){
                 this.contacts[this.chatAttiva].messages.push(newMessage);
                 console.log("ENTER, Messaggio inviato!")
+                setTimeout(this.nuovoMessaggioRicevuto, 1000)
                 this.pulisciInput();
             }else{
                 console.warn("Scrivi qualcosa prima di inviare!")
             }
         },
+        nuovoMessaggioRicevuto: function(){
+            const newMessageReceived = {
+                date: '',
+                message: 'Ok, amico!',
+                status: 'received',
+            }
+            this.contacts[this.chatAttiva].messages.push(newMessageReceived)
+            console.log("Ti hanno risposto!")
+            
+        },
         pulisciInput: function(){
             this.testoNuovoMessaggio = '';
-        }
-        //Senti il vocale che ti sei fatto per ricordarti la tua logica che hai dietro. 
+        }, 
     }
 }).mount('#app')
