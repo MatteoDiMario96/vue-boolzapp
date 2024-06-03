@@ -227,16 +227,17 @@ createApp({
             return false 
         },
         orarioMessaggi: function(indiceElemento){
-            const orariMessaggiMappati = this.contacts.forEach(elemento => {
-                elemento.messages.map((elemento) => {
+            //Mi sono creato un array con le date modificate ma cosi mi sembra impossibile assegnarle senza creare altri v-for
+            const orariMessaggiMappati = this.contacts.map(elemento => {
+                elemento.messages.map((message) => {
                     return {
-                        date: elemento.messages.date.splice(11)
+                        date: message.date.slice(10, 16)
                     }
-            });
-
-            })
-            return orariMessaggiMappati
-            
+                });
+            }) 
         } 
     }
 }).mount('#app')
+
+
+
