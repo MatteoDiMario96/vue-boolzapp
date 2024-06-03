@@ -167,6 +167,7 @@ section#lista-messaggi > ul > li {
     margin-bottom: .7rem;
     padding-bottom: .3rem;
     border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
 }
 
 ul > li > div > img {
@@ -221,15 +222,16 @@ main > footer{
     background-color: #eaeaea;
 }
 section#messaggi{
-display: flex;
-flex-direction: column;
-overflow: auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 3rem;
 
 }
 
 div.messaggio_ricevuto,
 div.messaggio_inviato{
-    padding: 1rem;
+    margin-bottom: 1rem;
 }
 
 section#messaggi > div.messaggio_inviato{
@@ -238,18 +240,21 @@ section#messaggi > div.messaggio_inviato{
 }
 .messaggio-inviato{
     background-color: #d5f9ba;
-    padding: .5rem .4rem;
+    padding: .7rem .7rem;
     border-radius: .5rem;
     margin-top: .6rem;
     font-size: 15px;
+    width: 40%;
 }
 
 .messaggio-ricevuto{
     background-color: white;
-    padding: .5rem .4rem;
+    padding: .7rem .7rem;
     border-radius: .5rem;
     margin-top: 1rem;
     font-size: 15px;
+    display: inline-block;
+    width: 40%;
 }
 
 footer#scrittura-emoticon-vocale{

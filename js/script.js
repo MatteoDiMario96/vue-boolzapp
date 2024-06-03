@@ -171,13 +171,30 @@ createApp({
                 avatar: './img/avatar_io.jpg',
             },
             chatAttiva: 0,
-            
+            testoNuovoMessaggio: '',
         }
     },
     methods:{
         cambiaChatAttiva: function(chatClickata){
             this.chatAttiva = chatClickata;
-            console.log(`Clickato ${this.contacts[chatClickata].name}!`)
+            console.log(`Clickato come chatAttiva ${this.contacts[chatClickata].name}!`)
+        },
+        nuovoMessaggioInviato: function(){
+            const newMessage = {
+                date: '',
+                message: this.testoNuovoMessaggio,
+                status: 'sent',
+            }
+            if(this.testoNuovoMessaggio.length > 1){
+                this.contacts[this.chatAttiva].messages.push(newMessage);
+                console.log("ENTER, Messaggio inviato!")
+                this.pulisciInput();
+            }else{
+                console.warn("Scrivi qualcosa prima di inviare!")
+            }
+        },
+        pulisciInput: function(){
+            this.testoNuovoMessaggio = '';
         }
         //Senti il vocale che ti sei fatto per ricordarti la tua logica che hai dietro. 
     }
