@@ -225,6 +225,18 @@ createApp({
                 return true
             }
             return false 
+        },
+        orarioMessaggi: function(indiceElemento){
+            const orariMessaggiMappati = this.contacts.forEach(elemento => {
+                elemento.messages.map((elemento) => {
+                    return {
+                        date: elemento.messages.date.splice(11)
+                    }
+            });
+
+            })
+            return orariMessaggiMappati
+            
         } 
     }
 }).mount('#app')

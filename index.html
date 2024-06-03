@@ -111,6 +111,9 @@
                             <div v-if="message.status === 'received' " class="messaggio_ricevuto">
                                 <span class="messaggio-ricevuto">
                                     {{ message.message }}
+                                    <span>
+                                        {{ orarioMessaggi }}
+                                    </span>
                                 </span>
                             </div>
                             <div v-else class="messaggio_inviato">
