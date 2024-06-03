@@ -209,8 +209,12 @@ createApp({
             this.testoNuovoMessaggio = '';
         },
         filtraListaChat: function(indiceElemento){
-            this.filtraChat = this.filtraChat.charAt(0).toUpperCase() + this.filtraChat.slice(1).toLowerCase();
-            if(this.contacts[indiceElemento].name.includes(this.filtraChat)){
+            const contactsLowerCase = this.contacts.map((elemento) => {
+                return{
+                    name: elemento.name.toLowerCase()
+                }
+            })
+            if(contactsLowerCase[indiceElemento].name.includes(this.filtraChat)){
                 return true
             }
             return false 
