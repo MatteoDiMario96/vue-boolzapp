@@ -245,6 +245,7 @@ section#messaggi > div.messaggio_inviato{
 .messaggio-inviato{
     background-color: #d5f9ba;
     padding: .7rem .7rem;
+    padding-right: 3rem;
     border-radius: .5rem;
     font-size: 15px;
     width: 40%;
@@ -253,6 +254,7 @@ section#messaggi > div.messaggio_inviato{
 .messaggio-ricevuto{
     background-color: white;
     padding: .7rem .7rem;
+    padding-right: 3rem;
     border-radius: .5rem;
     font-size: 15px;
     display: inline-block;
