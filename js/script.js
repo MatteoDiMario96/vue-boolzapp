@@ -177,7 +177,7 @@ createApp({
     methods:{
         cambiaChatAttiva: function(chatClickata){
             this.chatAttiva = chatClickata;
-            console.log("ciao")
+            console.log("Clickato!")
         }
         //Senti il vocale che ti sei fatto per ricordarti la tua logica che hai dietro. 
     }
