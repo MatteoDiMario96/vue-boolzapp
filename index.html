@@ -55,11 +55,11 @@
                     </section>
                     <nav id="ricerca-messaggi">
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filtraChat">
                     </nav>
                     <section id="lista-messaggi">
                         <ul>
-                            <li v-for="(contact, indice) in contacts" :key="indice" @click="cambiaChatAttiva(indice)">
+                            <li v-for="(contact, indice) in contacts" :key="indice" @click="cambiaChatAttiva(indice)" v-show="filtraListaChat(indice)">
                                 <div class="messaggio-sinistro">
                                     <img :src="`${contact.avatar}.jpg`" alt="">
                                     <div class="barra-messaggio">

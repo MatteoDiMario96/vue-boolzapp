@@ -172,6 +172,7 @@ createApp({
             },
             chatAttiva: 0,
             testoNuovoMessaggio: '',
+            filtraChat: '',
         }
     },
     methods:{
@@ -206,6 +207,13 @@ createApp({
         },
         pulisciInput: function(){
             this.testoNuovoMessaggio = '';
-        }, 
+        },
+        filtraListaChat: function(indiceElemento){
+            this.filtraChat = this.filtraChat.charAt(0).toUpperCase() + this.filtraChat.slice(1).toLowerCase();
+            if(this.contacts[indiceElemento].name.includes(this.filtraChat)){
+                return true
+            }
+            return false 
+        } 
     }
 }).mount('#app')
