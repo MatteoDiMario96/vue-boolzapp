@@ -59,7 +59,7 @@
                     </nav>
                     <section id="lista-messaggi">
                         <ul>
-                            <li v-for="(contact, indice) in contacts" :key="indice" @click="cambiaChatAttiva(indice)" v-show="filtraListaChat(indice)">
+                            <li v-for="(contact, indice) in contacts" :key="indice" @click="cambiaChatAttiva(indice)" v-show="filtraListaChat(indice)" :class="(chatAttiva === indice) ? 'active' : '' ">
                                 <div class="messaggio-sinistro">
                                     <img :src="`${contact.avatar}.jpg`" alt="">
                                     <div class="barra-messaggio">
@@ -74,11 +74,11 @@
                                     </div>
                                 </div>
                                 <div class="data-ora-messaggio">
-                                    <div class="data">
+                                    <!-- <div class="data">
                                         25/11/23 
-                                    </div>
+                                    </div> -->
                                     <div class="ora">
-                                        11.24
+                                        12.04
                                     </div>
                                 </div>
                             </li>
@@ -111,14 +111,17 @@
                             <div v-if="message.status === 'received' " class="messaggio_ricevuto">
                                 <span class="messaggio-ricevuto">
                                     {{ message.message }}
-                                    <span>
-                                        {{}}
+                                    <span class="orario">
+                                        {{message.date.slice(10, 16)}}
                                     </span>
                                 </span>
                             </div>
                             <div v-else class="messaggio_inviato">
                             <span class="messaggio-inviato">
                                 {{ message.message }}
+                                <span class="orario">
+                                    {{message.date.slice(10, 16)}}
+                                </span>
                             </span>
                         </div>
                         </template>

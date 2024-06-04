@@ -176,7 +176,7 @@ createApp({
         }
     },
     methods:{
-        cambiaChatAttiva: function(chatClickata){
+        cambiaChatAttiva: function(chatClickata, contatto){
             this.chatAttiva = chatClickata;
             console.log(`Clickato come chatAttiva ${this.contacts[chatClickata].name}!`)
         },
