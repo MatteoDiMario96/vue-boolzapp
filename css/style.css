@@ -68,7 +68,8 @@ main > header {
 }
 
 i{
-    color: #b0b0b0
+    color: #b0b0b0;
+    cursor: pointer;
 }
 
 aside > header > div#profilo-attivo{

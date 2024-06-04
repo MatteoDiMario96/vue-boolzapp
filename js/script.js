@@ -182,7 +182,7 @@ createApp({
         },
         nuovoMessaggioInviato: function(){
             const newMessage = {
-                date: '',
+                date: '04/06/2024 10:14:52',
                 message: this.testoNuovoMessaggio,
                 status: 'sent',
             }
@@ -197,7 +197,7 @@ createApp({
         },
         nuovoMessaggioRicevuto: function(){
             const newMessageReceived = {
-                date: '',
+                date: '04/06/2024 10:14:53',
                 message: 'Ok, amico!',
                 status: 'received',
             }
