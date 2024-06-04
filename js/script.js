@@ -235,7 +235,10 @@ createApp({
                     }
                 });
             }) 
-        } 
+        },
+        cancellaMessaggio: function(indiceElemento){
+            this.contacts[this.chatAttiva].messages.splice(indiceElemento, 1)
+        }
     }
 }).mount('#app')
 
