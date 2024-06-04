@@ -300,13 +300,18 @@ div.orario{
 
 .message-option-span{
     position: absolute;
-    left: 78%;
     top: 50%;
     background-color: white;
     padding: .7rem;
     width: 100%;
     text-align: center;
     border-radius: .5rem;
+}
+.sinistro{
+    left: 78%;
+}
+.destro{
+    left: 30%;
 }
 .message-option-span p {
     margin-bottom: .3rem;
@@ -348,6 +353,18 @@ footer#scrittura-emoticon-vocale > div#testo-messaggio > input{
     border-radius: .4rem;
     border: 1px solid #6c7171;
     padding: .3rem .4rem;
+}
+#emoticon{
+    position: relative;
+}
+
+div#div-emoticon-absolute{
+    position: absolute;
+    display: flex;
+    bottom: 100%;
+    left: 40%;
+}
+div#div-emoticon-absolute i {
 }
 
 div.fs_12{

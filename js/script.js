@@ -174,6 +174,7 @@ createApp({
             testoNuovoMessaggio: '',
             filtraChat: '',
             optionMenu: false,
+            menuEmoticon: false,
         }
     },
     methods:{
@@ -187,7 +188,8 @@ createApp({
                 message: this.testoNuovoMessaggio,
                 status: 'sent',
             }
-            if(this.testoNuovoMessaggio.length > 1){
+            
+            if(this.testoNuovoMessaggio.trim().length > 0){
                 this.contacts[this.chatAttiva].messages.push(newMessage);
                 console.log("ENTER, Messaggio inviato!")
                 setTimeout(this.nuovoMessaggioRicevuto, 1000)
@@ -240,9 +242,21 @@ createApp({
         cancellaMessaggio: function(indiceElemento){
             this.contacts[this.chatAttiva].messages.splice(indiceElemento, 1)
         },
-        apriChiudiMenu: function() {
+        apriChiudiMenu: function(indiceElemento) {
+            // const arrayMenuOpzioni = this.contacts.map((contact) => {
+            //     contact.messages.map((message) => {
+            //         return{
+            //             ...message,
+            //             optionMenu: false,
+            //         }
+            //     })
+            // })
+            // arrayMenuOpzioni[this.chatAttiva].messages[indiceElemento].optionMenu = !arrayMenuOpzioni[this.chatAttiva].messages[indiceElemento].optionMenu
             this.optionMenu = !this.optionMenu
         },
+        apriChiudiMenuEmoticon: function(){
+            this.menuEmoticon = !this.menuEmoticon
+        }
     }
 }).mount('#app')
 

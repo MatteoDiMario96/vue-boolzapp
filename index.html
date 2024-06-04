@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boolzapp</title>
-
+    <!--Link Emoji-->
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
     <!--FontAwesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!--GoogleFont CDN-->
@@ -125,7 +126,7 @@
                                     <span class="message-option bianco">
                                         <i class="fa-solid fa-chevron-down bianco" @click="apriChiudiMenu()"></i>
                                     </span>
-                                    <span class="message-option-span" 
+                                    <span class="message-option-span sinistro" 
                                     :class="
                                     (this.optionMenu === false)
                                     ? 'no-display'
@@ -133,7 +134,7 @@
                                     ">
                                         <div class="messagge-option-div-ricevuto">
                                             <p>Message info</p>
-                                            <p>Delete message</p>
+                                            <p @click="cancellaMessaggio(indice)">Delete message</p>
                                         </div>
                                     </span>
                                 </span>
@@ -145,7 +146,18 @@
                                     {{message.date.slice(10, 16)}}
                                 </span>
                                 <span class="message-option bianco">
-                                    <i class="fa-solid fa-chevron-down verdino"></i>
+                                    <i class="fa-solid fa-chevron-down verdino" @click="apriChiudiMenu()"></i>
+                                </span>
+                                <span class="message-option-span destro" 
+                                :class="
+                                (this.optionMenu === false)
+                                ? 'no-display'
+                                : 'inline-block'
+                                ">
+                                    <div class="messagge-option-div-ricevuto">
+                                        <p>Message info</p>
+                                        <p @click="cancellaMessaggio(indice)">Delete message</p>
+                                    </div>
                                 </span>
                             </span>
                         </div>
@@ -154,8 +166,114 @@
                     </section>
                     <footer id="scrittura-emoticon-vocale">                    
                         <div id="emoticon">
-                            <i class="fa-regular fa-face-smile-wink fa-xl"></i>
+                            <i class="fa-regular fa-face-smile-wink fa-xl" @click="apriChiudiMenuEmoticon()"></i>
+                                <div id="div-emoticon-absolute"
+                                :class="
+                                (this.menuEmoticon === false)
+                                ? 'no-display'
+                                : 'inline-block'
+                                ">
+                                    <i class="em em-crying_cat_face" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="CRYING CAT FACE"></i>
+                                    <i class="em em-bird" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="BIRD"></i>
+                                    <i class="em em-cat" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="CAT FACE"></i>
+                                    <i class="em em-bear" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="BEAR FACE"></i>
+                                    <i class="em em-boar" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="BOAR"></i>
+                                    <i class="em em-chicken" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="CHICKEN"></i>
+                                    <i class="em em-chipmunk" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label=""></i>
+                                    <i class="em em---1" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="THUMBS UP SIGN"></i>
+                                    <i class="em em--1" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="THUMBS DOWN SIGN"></i>
+                                    <i class="em em-100" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="HUNDRED POINTS SYMBOL"></i>
+                                    <i class="em em-angry" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-label="ANGRY FACE"></i>
+                                    <i class="em em-anguished" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-label="ANGUISHED FACE"></i>
+                                    <i class="em em-astonished" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="ASTONISHED FACE"></i>
+                                    <i class="em em-baby" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="BABY"></i>
+                                    <i class="em em-dizzy_face" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="DIZZY FACE"></i>
+                                    <i class="em em-face_with_hand_over_mouth" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="SMILING FACE WITH SMILING EYES AND HAND COVERING MOUTH"></i>
+                                    <i class="em em-heart_eyes" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="SMILING FACE WITH HEART-SHAPED EYES"></i>
+                                    <i class="em em-heart" :class="
+                                    (this.menuEmoticon === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    "aria-role="presentation" aria-label="HEAVY BLACK HEART"></i>
+                                </div>
                         </div>
+                        
                         <div id="testo-messaggio">
                             <input type="text" placeholder="Scrivi un messaggio" v-model="testoNuovoMessaggio" @keyup.enter="nuovoMessaggioInviato()">
                         </div>
