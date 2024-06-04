@@ -117,18 +117,31 @@
                         <!-- Se ha status received va vedere altrimenti no -->
                         <template v-for="(message,indice) in contacts[chatAttiva].messages" :key="indice" class="">
                             <div v-if="message.status === 'received' " class="messaggio_ricevuto">
-                                <span class="messaggio-ricevuto" @click="cancellaMessaggio(indice)">
+                                <span class="messaggio-ricevuto" @click="">
                                     {{ message.message }}
                                     <span class="orario">
                                         {{message.date.slice(10, 16)}}
                                     </span>
+                                    <span class="message-option bianco">
+                                        <i class="fa-solid fa-chevron-down bianco" @click=""></i>
+                                    </span>
+                                    <span class="message-option-span" 
+                                    :class="aggiungiRimuoviClasse()">
+                                        <div class="messagge-option-div-ricevuto">
+                                            <p>Info sul messaggio</p>
+                                            <p>Cancella il messaggio</p>
+                                        </div>
+                                    </span>
                                 </span>
                             </div>
                             <div v-else class="messaggio_inviato">
-                            <span class="messaggio-inviato" @click="cancellaMessaggio(indice)">
+                            <span class="messaggio-inviato" >
                                 {{ message.message }}
                                 <span class="orario">
                                     {{message.date.slice(10, 16)}}
+                                </span>
+                                <span class="message-option bianco">
+                                    <i class="fa-solid fa-chevron-down verdino"></i>
                                 </span>
                             </span>
                         </div>

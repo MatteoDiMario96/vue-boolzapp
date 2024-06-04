@@ -238,6 +238,10 @@ createApp({
         },
         cancellaMessaggio: function(indiceElemento){
             this.contacts[this.chatAttiva].messages.splice(indiceElemento, 1)
+        },
+        aggiungiRimuoviClasse: function(elemento){
+            elemento.classList.remove("no-display");
+            elemento.classList.add("inline-block");
         }
     }
 }).mount('#app')
