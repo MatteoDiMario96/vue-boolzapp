@@ -123,9 +123,14 @@
                                         {{message.date.slice(10, 16)}}
                                     </span>
                                     <span class="message-option bianco">
-                                        <i class="fa-solid fa-chevron-down bianco" @click=""></i>
+                                        <i class="fa-solid fa-chevron-down bianco" @click="apriChiudiMenu()"></i>
                                     </span>
-                                    <span class="message-option-span">
+                                    <span class="message-option-span" 
+                                    :class="
+                                    (this.optionMenu === false)
+                                    ? 'no-display'
+                                    : 'inline-block'
+                                    ">
                                         <div class="messagge-option-div-ricevuto">
                                             <p>Message info</p>
                                             <p>Delete message</p>
